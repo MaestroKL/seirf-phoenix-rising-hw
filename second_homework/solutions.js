@@ -17,3 +17,19 @@
 // console.log (wordForward('Hello World'))
 
 
+// Sum Array = Did not get. It does not spit out any console. 
+// let array = []
+// let partialSum = 0
+
+// // Define function
+// let sumArray = () => {
+//     for (i=0; i < array.length; i++){
+//     partialSum = partialSum + array(i)
+// }
+// // invoke function
+// sumArray (array [5, 6, 7]);
+
+// return partialSum
+// // output sum of array integers
+// console.log (partialSum);
+// }
