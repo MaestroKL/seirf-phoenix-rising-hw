@@ -23,9 +23,17 @@
 //     else {console.log (i)}
 // }
 
-// Wild Wild Life
-1. plantee [2] = 197
-2. wolfy [3] = "Gotham City"
-3. dart.push = "Hawkins"
-4. wolfy [1] = "Gameboy"
+// // Wild Wild Life
+// 1. plantee [2] = 197
+// 2. wolfy [3] = "Gotham City"
+// 3. dart.push = "Hawkins"
+// 4. wolfy [1] = "Gameboy"
 
+// Yell at Ninja Turtles - did not get the "for of" loop. spitting out error
+// ninjaTurtles = []
+// ninjaTurtles.push = ["Donatello", "Leonardo", "Rapheal", "Michaelangelo"]
+// // console.log (ninjaTurtles)
+
+// for of (i=0; i<ninjaTurtles.length; i++){
+//     console.log (ninjaTurtles.toUpperCase(i))
+// }
