@@ -33,3 +33,22 @@
 // // output sum of array integers
 // console.log (partialSum);
 // }
+
+// Prime Numbers 
+// checkPrime = (num) => {
+// for (i=3; i < Math.sqrt(num);i++){
+//     if (num%i === 0){
+//         return false}
+//     }
+//     else (return true)
+// // Prime returns as false but not prime returns undefined but inputing this "else statement" is causing an error. 
+//     }
+// console.log (checkPrime (7));
+
+// printPrime = (limit) = {
+// for (i=0; i <=limit; i++){
+//     if (checkPrime(i){
+//         console.log (i)
+//     }
+// }
+// }
