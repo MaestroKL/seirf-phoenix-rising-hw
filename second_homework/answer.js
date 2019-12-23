@@ -23,17 +23,49 @@
 //     else {console.log (i)}
 // }
 
-// // Wild Wild Life
-// 1. plantee [2] = 197
+// Wild Wild Life
+// const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
+// const sharky = ["Sharky", "shark", 20, "Left Coast"]
+// const plantee = ["Plantee", "plant",  5000 , "Mordor"]
+// const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
+// const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
+
+// 1. plantee [2]= 5001
 // 2. wolfy [3] = "Gotham City"
 // 3. dart.push = "Hawkins"
 // 4. wolfy [1] = "Gameboy"
 
-// Yell at Ninja Turtles - did not get the "for of" loop. spitting out error
+
+// // Yell at Ninja Turtles
 // ninjaTurtles = []
-// ninjaTurtles.push = ["Donatello", "Leonardo", "Rapheal", "Michaelangelo"]
+// ninjaTurtles.push("Donatello", "Leonardo", "Rapheal", "Michaelangelo")
 // // console.log (ninjaTurtles)
 
-// for of (i=0; i<ninjaTurtles.length; i++){
-//     console.log (ninjaTurtles.toUpperCase(i))
-// }
+// // // for (i=0; i<ninjaTurtles.length; i++){
+// //     let turtles = []
+// //     turtle.push ninjaTurtles[i] 
+// //     console.log (turtle)
+// // // (ninjaTurtles.toUpperCase())
+// // // // }
+// for (x of ninjaTurtles) {console.log(x.toUpperCase())}
+// // console.log (turtle)
+
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+favMovies.sort()
+console.log (favMovies)
+favMovies.pop()
+console.log (favMovies)
+favMovies.push("Guardians of the Galaxy")
+console.log (favMovies)
+favMovies.reverse()
+console.log(favMovies)
+favMovies.shift()
+console.log(favMovies)
+favMovies.unshift()
+console.log(favMovies)
+favMovies.unshift("Hackers")
+console.log(favMovies)
+favMovies.splice(favMovies.indexOf(("Django Unchained"), 1, "Avatar")) //identifies index, removes one index, add one index in place
+console.log (favMovies)
+const sliceHalfMovies = favMovies.slice(Math.floor(favMovies.length/2), favMovies.length);
+console.log(sliceHalfMovies);
