@@ -50,22 +50,46 @@
 // for (x of ninjaTurtles) {console.log(x.toUpperCase())}
 // // console.log (turtle)
 
-const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-favMovies.sort()
-console.log (favMovies)
-favMovies.pop()
-console.log (favMovies)
-favMovies.push("Guardians of the Galaxy")
-console.log (favMovies)
-favMovies.reverse()
-console.log(favMovies)
-favMovies.shift()
-console.log(favMovies)
-favMovies.unshift()
-console.log(favMovies)
-favMovies.unshift("Hackers")
-console.log(favMovies)
-favMovies.splice(favMovies.indexOf(("Django Unchained"), 1, "Avatar")) //identifies index, removes one index, add one index in place
-console.log (favMovies)
-const sliceHalfMovies = favMovies.slice(Math.floor(favMovies.length/2), favMovies.length);
-console.log(sliceHalfMovies);
+// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+// favMovies.sort()
+// console.log (favMovies)
+// favMovies.pop()
+// console.log (favMovies)
+// favMovies.push("Guardians of the Galaxy")
+// console.log (favMovies)
+// favMovies.reverse()
+// console.log(favMovies)
+// favMovies.shift()
+// console.log(favMovies)
+// favMovies.unshift()
+// console.log(favMovies)
+// favMovies.unshift("Hackers")
+// console.log(favMovies)
+// favMovies.splice(favMovies.indexOf(("Django Unchained"), 1, "Avatar")) //identifies index, removes one index, add one index in place
+// console.log (favMovies)
+// const sliceHalfMovies = favMovies.slice(Math.floor(favMovies.length/2), favMovies.length);
+// console.log(sliceHalfMovies);
+
+// [
+//     'Oculus',
+//     'Jaws',
+//     'Imitation of Life',
+//     "Howl's Moving Castle",
+//     'Harry Potter',
+//     'Harry Potter',
+//     'Fried Green Tomatoes',
+//     'Fast and Furious'
+//   ]
+
+// Where is Waldo?
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+["Lucinda", "Jacc", "Neff", "Snoop"],
+["Petunia", ["Baked Goods", "Waldo"]]];
+
+// 1. whereIsWaldo.splice (1,1)
+// console.log (whereIsWaldo)
+
+// 2. whereIsWaldo[2][2]="No One"
+// console.log (whereIsWaldo)
+
+console.log(whereIsWaldo[3][1][1])
