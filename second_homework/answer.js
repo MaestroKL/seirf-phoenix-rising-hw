@@ -106,3 +106,13 @@
 //     }
 //     else ("Love me, pet me! HSSSSSS!")
 // }
+
+// Find the Median - did not solve; 4 hour mark
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums.sort();
+
+for (ber of nums.length){
+    if nums.splice(0,1)
+    nums.splice(-1, 1)
+}    
+console.log (nums)
