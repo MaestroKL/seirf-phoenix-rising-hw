@@ -82,14 +82,27 @@
 //   ]
 
 // Where is Waldo?
-const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
-["Lucinda", "Jacc", "Neff", "Snoop"],
-["Petunia", ["Baked Goods", "Waldo"]]];
+// const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+// ["Lucinda", "Jacc", "Neff", "Snoop"],
+// ["Petunia", ["Baked Goods", "Waldo"]]];
 
-// 1. whereIsWaldo.splice (1,1)
-// console.log (whereIsWaldo)
+// // 1. whereIsWaldo.splice (1,1)
+// // console.log (whereIsWaldo)
 
-// 2. whereIsWaldo[2][2]="No One"
-// console.log (whereIsWaldo)
+// // 2. whereIsWaldo[2][2]="No One"
+// // console.log (whereIsWaldo)
 
-console.log(whereIsWaldo[3][1][1])
+// console.log(whereIsWaldo[3][1][1])
+
+// Excited Kitten
+// prompts = ["...human...why you taking pictures of me", "...the catnip made me do it...", "...why does the red dot always get away..."]
+// let positionPrompts = 
+//     minimum = 0
+//     maximum = positionPrompts.length
+// for (i=0, 0<20, i++){
+//     if statement...(i%2 === 0){
+//         let prompts = Math.floor(math.random()*positionPrompts.length) //doesn't this get 0 or 2? how does it evaluate to 1?
+//         console.log (prompts.(positionPrompts))
+//     }
+//     else ("Love me, pet me! HSSSSSS!")
+// }
