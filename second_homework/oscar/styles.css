@@ -1,0 +1,124 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    color: blue;
+    float: left;
+}
+
+h2, h3 {
+    float: right;
+    font-size: 18px;
+    padding: 4px;
+}
+
+
+h2 {
+    padding: 7px 0px 0px 25px;
+}
+
+.bluebox {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(0, 42, 255);
+    padding: 100px 140px 140px 100px;
+    clear: both;
+}
+.biggertext {
+    font-size: 60px;
+}
+
+.button {
+    color: blue;
+    padding: 14px;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.sub1, .sub2, .sub3 {
+    text-align: center;
+    display: inline-block;
+    /* width: 29%; */
+    /* border-color: black; */
+    /* border: black; */
+    /* padding: 10px; */
+    /* background-color: pink; */
+    margin: 30px 30px 30px 100px;
+    float: left;
+    width: auto;
+}
+/* }
+.subboxes1 {
+    display: inline-block;
+}
+
+.subboxes2 {
+    display: inline-block;
+}
+
+.subboxes3 {
+    display: inline-block;
+} */
+
+/* section {
+    align: center;
+} */
+
+h6 {
+    text-align: center;
+    clear: both;
+
+}
+
+.ready {
+    font-size: 24px;
+    color: gray;
+    padding-bottom: 0px;
+    clear; both;
+}
+
+.find {
+    font-size: 40px;
+    clear: both;
+    }
+
+.forYou {
+    text-align: center;
+    border-color: black;
+    padding: 14px 30px 14px 30px;
+    margin: 30px 30px 30px 400px;
+    color: white;
+    background-color: blue;
+    width: 20%;
+    float: left;
+}
+
+.forBusiness {
+    text-align: center;
+    border-color: black;
+    padding: 14px 30px 14px 30px;
+    margin: 30px 400px 30px 30px;
+    color: blue;
+    background-color: white;
+    width: 20%;
+    float: right;
+}
+
+footer {
+    color: gray;
+    clear: both;
+}
+
+.foot {
+    display: inline-block;
+    width: 15%;
+    list-style: none;
+}
+/* 
+.foot1, .foot2, .foot3, .foot4, .foot5 {
+    width: 15%;
+    display: inline-block;
+    clear: both;
+} */
