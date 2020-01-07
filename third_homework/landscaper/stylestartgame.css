@@ -1,0 +1,26 @@
+body {
+    background-image: url(images/Landscaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* width: 100%; */
+    text-align: center;
+    margin: 5%;
+}
+
+h1 {
+    color: black;
+}
+
+.Startgame, .Howtoplay {
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 25px;
+/* P edits not working?!?!? */
+p {
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    color: blue;
+}

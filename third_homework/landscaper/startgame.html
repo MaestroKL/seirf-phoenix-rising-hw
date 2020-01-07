@@ -5,13 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylestartgame.css">
 </head>
 <body>
-    <nav>
-            <a href="file:///Users/maestrokl/Desktop/seirf-phoenix-rising-hw/third_homework/landscaper/Index.html">Home</a>
-    </nav>
+    <h2>Tools</h2>
+        <div class="teeth"> 
+            <h3>Bare teeth ($1/day)</h3>
+            <!-- Teethcount with incrementors -->
+                <script>
+                    let th = 0;
+                    function teethAdd() {
+                        th++;
+                        document.getElementById('teethnumber').value = th;
+                    }
+                    function teethMinus() {
+                        th--;
+                        document.getElementById('teethnumber').value = th;
+                    }
+                </script>
+                <button id="teethincrement" onclick="teethAdd();">Increment</button>
+                <input type="text" id="teethnumber" value=0></input>
+                <button id="teethdecrement" onclick="teethMinus();">Decrement</button>
+        </div>
+        <div class="scissor">
+            <h3>Scissor ($5/day)</h3>
+            <!-- Scissorcount with incrementors -->
+                <script>
+                    let sc = 0;
+                    function scissorAdd() {
+                        sc++;
+                        document.getElementById('scissornumber').value = sc;
+                    }
+                    function scissorMinus() {
+                        sc--;
+                        document.getElementById('scissornumber').value = sc;
+                    }
+                </script>
+                <button id="scissorincrement" onclick="scissorAdd();">Increment</button>
+                <input type="text" id="scissornumber" value=0></input>
+                <button id="scissordecrement" onclick="scissorMinus();">Decrement</button>
+        </div>
+        <div class="lawnmower">
+            <h3>Lawnmower ($25/day)</h3>
+            <!-- lawnmowercount with incrementors -->
+                <script>
+                    let lm = 0;
+                    function lawnmowerAdd() {
+                    lm++;
+                    document.getElementById('lawnmowernumber').value = lm;
+                }
+                    function lawnmowerMinus() {
+                    lm--;
+                    document.getElementById('lawnmowernumber').value = lm;
+                }
+                </script>
+                <button id="lawnmowerincrement" onclick="lawnmowerAdd();">Increment</button>
+                <input type="text" id="lawnmowernumber" value=0></input>
+                <button id="lawnmowerdecrement" onclick="lawnmowerMinus();">Decrement</button>
+        </div>
+        <div class="powermower">
+                <h3>Powermower ($250/day)</h3>
+                <!-- powermowercount with incrementors -->
+                    <script>
+                        let pm = 0;
+                        function powermowerAdd() {
+                        pm++;
+                        document.getElementById('powermowernumber').value = pm;
+                    }
+                        function powermowerMinus() {
+                        pm--;
+                        document.getElementById('powermowernumber').value = pm;
+                    }
+                    </script>
+                    <button id="powermowerincrement" onclick="powermowerAdd();">Increment</button>
+                    <input type="text" id="powermowernumber" value=0></input>
+                    <button id="powermowerdecrement" onclick="powermowerMinus();">Decrement</button>
+            </div>
+            <div class="student">
+                <h3>Student ($500/day)</h3>
+                <!-- studentcount with incrementors -->
+                    <script>
+                        let st = 0;
+                        function studentAdd() {
+                        st++;
+                        document.getElementById('studentnumber').value = st;
+                    }
+                        function studentMinus() {
+                        st--;
+                        document.getElementById('studentnumber').value = st;
+                    }
+                    </script>
+                    <button id="studentincrement" onclick="studentAdd();">Increment</button>
+                    <input type="text" id="studentnumber" value=0></input>
+                    <button id="studentdecrement" onclick="studentMinus();">Decrement</button>
+            </div>
 
-    <h1>test1</h1>
+    <h2>Business Balance</h2>
+    <!-- calculate business generated per day (before collection)-->
+        <script>
+            let currentBalance = 500;
+            function businessClick() {
+                currentBalance = (teethnumber.value*1 + scissornumber.value*5 + lawnmowernumber.value*25 + powermowernumber.value*250 + studentnumber.value*500);
+                document.getElementById("businessBalance").value = currentBalance;
+            }
+            // Summation of days based on number of clicks
+            let addDay = 0;
+            function sumDay(){
+                addDay ++;
+                document.getElementById("addDay").innerHTML = addDay;
+            }
+
+        </script>
+
+        <!-- button to calculate potentials for the day-->
+        <button id="updateBusinessBalance" onclick="businessClick()">Projected earnings per day</button>
+        <input type="text" id="businessBalance" value=0></input><br>
+        <!-- button to collect earnings for the day and increase day counter by 1-->
+        <button id="executeWorkDay" onclick="sumDay(); earningTotalFunction()">Execute work day and collect earnings!</button>
+        <p>Days worked: <a id="addDay">0</p>
+       
+       
+       <script>
+                    // push businessBalance.value into array
+                    let earningArray = [];
+            earningArray.push (businessBalance.value);
+            // summation of earningArray
+            for (let i = 0; i <earningArray.length; i++){
+                sum+=earningArray[i];
+                earningTotal = sum;
+                }
+            // Function to enter earningTotal to document
+            function earningTotalFunction(){
+                document.getElementById("earningTotal").innerHTML = earningTotal;
+            }    
+        </script>
+        <p>Total earnings: <a id="earningTotal">0</p>
+
+
+
+    <nav>
+        
+    </nav>
         <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+body {
+    background-image: url(images/Landscaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* width: 100%; */
+    text-align: center;
+    margin: 20%;
+}
+
+h1 {
+    color: black;
+}
+
+.Startgame, .Howtoplay {
+    padding: 15px 30px 15px 30px;
+    margin: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: gray;
+    border-radius: 25px;
+
