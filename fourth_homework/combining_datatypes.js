@@ -54,3 +54,69 @@ let powerButton = () => {
     }
 }
 powerButton()
+
+// MODEL A VENDING MACHINE 
+// vendingMachine = {
+//     snacks: [
+//         {
+//             name: "kitkat",
+//             price: 5,
+//         }, 
+//         {
+//             name: "snickers",
+//             price: 4,
+//         }, 
+//         {
+//             name: "twix",
+//             price: 3,
+//         }, 
+//     ]
+//     vendReturn = (input) => {
+//         console.log("vending", vendingMachine.snacks[input])
+//     }
+// }
+// vendMachine.vendReturn(1)
+
+// CALLBACKS
+// ADDITION
+// let calcAdd = function (a,b){
+//     return a+b
+// }
+// let calcSub = function (a,b){
+//     return a-b
+// }
+// let calcMul = function (a,b){
+//     return a*b
+// }
+// let calcDiv = function (a,b){
+//     return a/b
+// }
+
+// // let calc = function(num1, num2, callback){
+// //         return callback(4, 5, callback)
+// // }
+// // console.log(calc (1, 2, calcSub))
+
+// let calculate = function(num4, num5, operates){
+//     return operates(num4, num5)
+// }
+// console.log(calculate (4, 5, calcAdd))
+// console.log(calculate (4, 5, calcSub))
+// console.log(calculate (4, 5, calcDiv))
+// console.log(calculate (4, 5, calcMul))
+
+// FUNCTION DEFINITION PLACEMENT (code clean up.)
+
+// const bar = () => {
+//     console.log('bar here');
+// }
+// bar();
+// ;
+
+// const foo = () => {
+//     console.log('foo here');
+// }
+// foo()
+
+
+// Missing "="
