@@ -32,14 +32,16 @@
             <!-- Scissorcount with incrementors -->
                 <script>
                     let sc = 0;
-                    function scissorAdd() {
+                        function scissorAdd() {
                         sc++;
                         document.getElementById('scissornumber').value = sc;
                     }
+
                     function scissorMinus() {
                         sc--;
                         document.getElementById('scissornumber').value = sc;
                     }
+
                 </script>
                 <button id="scissorincrement" onclick="scissorAdd();">Increment</button>
                 <input type="text" id="scissornumber" value=0></input>
@@ -127,16 +129,13 @@
        
        <script>
                     // push businessBalance.value into array
-                    let earningArray = [];
+            let earningArray = [];
             earningArray.push (businessBalance.value);
-            // summation of earningArray
-            for (let i = 0; i <earningArray.length; i++){
-                sum+=earningArray[i];
-                earningTotal = sum;
-                }
+            console.log(earningArray)
+
             // Function to enter earningTotal to document
             function earningTotalFunction(){
-                document.getElementById("earningTotal").innerHTML = earningTotal;
+                document.getElementById("earningTotal").innerHTML = earningArray;
             }    
         </script>
         <p>Total earnings: <a id="earningTotal">0</p>
