@@ -1,78 +1,183 @@
+// USS Maestro is captain of Defender
+// Six alien ships will attack in tandem
+// Game mechanics: 
+// Defender attacks first. If alien survives, it attacks you. Repeat
+    // If alienship destroyed; Defender has optin to retreat or attack; 
+        // retreat will end in game-over
+        // attack will bring on next attacker
 
-// Ship 1: USS MaestroKL object:
-let player1 = {
+// SHIP PROPERTIES: 
+
+let usMaestro = {
     hull: 20,
-    firepower: 20,
+    firepower: 5,
     accuracy: 0.7,
-    attack: () =>{
-    console.log("attacking")
-    attack = enemyShip => {
-        console.log("Player attacking Alien ship");
-        // determine if player hit or miss
-        if (Math.random < player1.accuracy){
-            console.log("Attack hit");
-            alien1.hull = alien1.hull - player1.firepower;
-        }
-        else console.log ("Attack Miss")
-        // Alien autoattack player1
-            alien1.attack(player1)
-    }
-}
 }
 
-//Determine enemy random hull strength 3-6
-let randomHull = Math.ceil((Math.random()*4)+2)
-
-//Determine enemy random firepower 2-4
-let randomFirepower = Math.ceil((Math.random()*3)+1)
-
-//determine enemy random accuracy between 0.6 and 0.8 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) + 1) + min;
+// TASK 1: ALIEN SHIP PROPERTIES with varying stats: 
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
   }
-let randomAccuracy = (getRndInteger(6, 8))/10
 
-// Ship 2: Alien ship
-//Class AlienShips template
-class AlienShip {
-    constructor(){
-        this.hull = randomHull
-        this.firepower = randomFirepower
-        this.accuracy = randomAccuracy
-        this.attack = playerShip => {
-            console.log ("Alienship attack Player")
-            if (Math.random < alien1.accuracy){
-                Console.log ("Alien attack hit!")
-                player1.hull = player1.hull - alien1.firepower
+let alienOne = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+
+let alienTwo = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+
+let alienThree = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+let alienFour = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+
+let alienFive = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+
+let alienSix = {
+    hull: Math.floor(Math.random()*4)+3,
+    firepower:  Math.floor(Math.random()*3)+2,
+    accuracy: (getRandomIntInclusive(6, 8))/10
+}
+
+// Create Class to generate multiple ships: shortcut for now; generating all 6 ships without class. 
+// class AlienShip {
+//     constructor(name, hull, firepower, accuracy){
+//         this.name = name
+//         this.hull = Math.floor(Math.random()*4)+3,
+//         this.firepower = Math.floor(Math.random()*3)+2,
+//         this.accuracy = (getRandomIntInclusive(6, 8))/10
+
+//     }
+// }
+// let alienArray = []
+// for (i=0; i <5; i++){
+//     let generateAlien = new AlienShip (i)
+//     alienArray.push (generateAlien)
+    
+// }
+
+
+
+// PLAYER INTERACTIVITY 
+
+
+    // Starting Prompt
+function attackCycle() {
+
+
+let yourStartAnswer = prompt("Are you ready to engage? (Yes/No)")
+
+if (yourStartAnswer == "Yes" ){
+        console.log ("Incoming enemy! Current Stats:")
+        console.log ("You")
+        console.log (usMaestro)
+        console.log ("Enemy")
+        console.log (alienOne)
+            }
+    else if (yourStartAnswer == "No") {
+        console.log("Gameover; hit refresh to restart")
+    }
+    else {console.log ("Please enter acceptable responses only; hit refresh to restart")}
+
+    // ENGAGEMENT PROMPT
+if (yourStartAnswer == "Yes"){
+    let engageAnswer = prompt("Approaching Enemy! Do you want to Attack or Retreat (Attack/Retreat)")
+        if (engageAnswer == "Attack"){
+            // recalculate hull integrity
+            if (Math.random()<0.7){
+                console.log("You scored a hit!")
+                alienOne.hull = alienOne.hull - usMaestro.firepower
             }
             else {
-                console.log ("Attack Miss")
+                console.log("You missed")
+            }
+            // re-console stats
+            console.log ("Current Stats:")
+            console.log ("You")
+                        console.log (usMaestro)
+            console.log ("Enemy")
+            console.log (alienOne)
+        }
+        else if (engageAnswer =="Retreat"){
+            console.log("Gameover. hit refresh to restart")
+        }
+        else {console.log ("Please enter acceptable responses only; hit refresh to restart")}
+    }
+
+// ENEMY RETURN FIRE PROMPT: If attack and alienOne.hull > 0, let enemy return fire
+    if (yourStartAnswer == "yes" && alienOne.hull > 0){
+        console.log ("Enemy survives. They are returning fire!")
+            if(Math.random()<alienOne.acccuracy){
+                console.log("Enemy scored a hit. We took damage!")
+                usMaestro.hull = usMaestro.hull - alienOne.firepower
+            }
+            else {
+                console.log("They missed!")
+                attackCycle()
             }
         }
-    }
-}
-// Start game
-console.log(player1)
-console.log("Generating enemy ship")
-alien1 = new AlienShip();
-console.log(alien1)
-
-
-let response = false;
-while (response == false){
-    response = prompt("attack or retreat", "attack");
-    if (response === "attack"){
-        console.log("Attack")
-    }
-    else if (response === "retreat"){
-        console.log("retreat: game over")
+    else {
+            console.log ("")
         }
-    else {response = false}
-}
 
+    }
+    attackCycle()
 
-// if attack, if hit(alienhull minus firepower). else if miss (alienhull)
-// if enemy alive, return fire: if hit(playerhull minus alienfirewpower); else if miss (playerhull)
-// if enemy is dead, console log Enemy is dead And prompt (generate new ship or retreat)
+    //     // If both ships are alive, run loop until one ship is destroyed
+    if (usMaestro.hull > 0 && alienOne.hull > 0){
+        attackCycle()
+        }
+        else if (usMaestro.hull <=0){
+            console.log ("You have been defeated. Hit refresh to restart")
+        }
+        else {console.log("Another enemy approaches")
+            // code to generate another ship (not DRY; 
+            // copy and paste until either usMaestro.hull or enemy.hull is ZERO)
+        }
+    // if (usMaestro.hull > 0 && alienOne.hull > 0){
+    //     attackCycle()
+    //     }
+    //     else if (usMaestro.hull <=0){
+    //         console.log ("You have been defeated. Hit refresh to restart")
+    //     }
+    //     else {console.log("Another enemy approaches")
+    // if (usMaestro.hull > 0 && alienOne.hull > 0){
+    //     attackCycle()
+    //     }
+    //     else if (usMaestro.hull <=0){
+    //         console.log ("You have been defeated. Hit refresh to restart")
+    //     }
+    //     else {console.log("Another enemy approaches")
+    //     }
+    //         // code to grab another ship from array
+    // }
+    
+// COMPLETED:   
+    // -ONE CYCLE OF usMaestro and alienONE done. 
+    // -Have function to loop an attack cycle until usMaestro.hull or enemy.hull is ZERO. 
+    // -Created 6 ships manually
 
-// prompt to attack or retreat
+// INCOMPLETE: 
+    // Generated array of random alien ships using Class. 
+        // -But still need code to call new ALIENSHIP by index position (create loop)
+    // Complete attackCycly() but need to recognize (while loop) that enemy still alive.
+
+// NOT DONE AT ALL: 
+    // Create code to recognize when all alien.hull or usMaestro.hull is 0 (gameover vs win). 
