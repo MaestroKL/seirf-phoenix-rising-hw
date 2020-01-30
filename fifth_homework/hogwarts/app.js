@@ -14,7 +14,18 @@ console.log($h1)
 $h1.text("Hogwarts")
 
 
+$h2 = $("<h2>");
+$h2.text("Maestrokl");
+$("body").append($h2)
 
+$h3 = $("<h3>");
+$h3.text("Hufflepuff");
+$("body").append($h3);
+
+$h4 = $("<h4>");
+$h4.text("cat");
+$h4.addClass("cat");
+$("body").append($h4);
 
 
 
